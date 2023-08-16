@@ -1,9 +1,9 @@
 module.exports = (sequelize, Sequelize) => {
-  const Reservation = sequelize(
+  const Reservation = sequelize.define(
     'Reservation',
     {
-      StartDate: Sequelize.DataTypes.Date,
-      EndDate: Sequelize.DataTypes.Date,
+      StartDate: Sequelize.DataTypes.DATE,
+      EndDate: Sequelize.DataTypes.DATE,
     },
     {
       timestamps: false,

@@ -9,5 +9,9 @@ module.exports = (sequelize, Sequelize) => {
       timestamps: false,
     }
   );
+  Room.associate = function (models) {
+    Room.belongsTo(models.Hotel);
+    Room.belongsToMany(models.User, { through: models.Reservation });
+  };
   return Room;
 };
