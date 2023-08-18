@@ -7,6 +7,7 @@ module.exports = (sequelize, Sequelize) => {
     },
     {
       timestamps: false,
+      hasTrigger: false,
     }
   );
   return Reservation;
